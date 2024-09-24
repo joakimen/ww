@@ -1,0 +1,16 @@
+# project binary
+go-cli-tpl
+
+# build output
+/output*/
+/_output*/
+/_output
+/dist
+
+# misc files
+.idea/
+*.iml
+.DS_Store
+.vscode
+.lsp/
+
