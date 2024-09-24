@@ -1,4 +1,4 @@
-module github.com/joakimen/go-cli-tpl
+module github.com/joakimen/ww
 
 go 1.23.1
 
