@@ -1,23 +1,12 @@
 SHELL = /usr/bin/env bash -o pipefail
 .SHELLFLAGS = -ec
 
-all: build fmt vet lint test
-
-.PHONY: build
-build:
-	go build -v
+all: fmt lint vet build test
 
 .PHONY: fmt
 fmt:
-	go fmt ./...
-
-.PHONY: vet
-vet:
-	go vet ./...
-
-.PHONY: test
-test:
-	go test ./...
+	# github.com/mvdan/gofumpt
+	gofumpt -l -w .
 
 .PHONY: lint
 lint:
@@ -26,3 +15,16 @@ lint:
 .PHONY: lint-fix
 lint-fix:
 	golangci-lint run --fix ./...
+
+.PHONY: vet
+vet:
+	go vet ./...
+
+.PHONY: build
+build:
+	go build -v
+
+.PHONY: test
+test:
+	go test ./...
+
