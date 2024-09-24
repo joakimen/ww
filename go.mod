@@ -1,6 +1,6 @@
 module github.com/joakimen/go-cli-tpl
 
-go 1.22.1
+go 1.23.1
 
 require github.com/spf13/cobra v1.8.0
 
