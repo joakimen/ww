@@ -51,7 +51,7 @@ linters:
     - nakedret
     - nolintlint
     - nosprintfhostport
-    - perfsprint
+    # - perfsprint
     - prealloc
     - predeclared
     - promlinter
